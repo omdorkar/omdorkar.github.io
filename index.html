@@ -51,8 +51,10 @@ nav.top .links-nav a:hover, nav.top .links-nav a.active { color: var(--ink); bac
 .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; padding: 64px 0 24px; }
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-2); background: var(--teal-soft); padding: 5px 12px; border-radius: 999px; margin: 0 0 18px; }
 .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
-h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.02; letter-spacing: -.02em; margin: 0 0 14px; }
+h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.05; letter-spacing: -.02em; margin: 0 0 10px; }
 h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+.tagline { display: flex; flex-wrap: wrap; gap: 4px 0; margin: 0 0 22px; font-family: var(--sans); font-size: clamp(.95rem, 1.5vw, 1.15rem); font-weight: 600; letter-spacing: .04em; color: var(--accent); }
+.tagline span + span::before { content: "\2022"; color: var(--gold); margin: 0 12px; }
 .place { color: var(--muted); margin: 0 0 22px; font-weight: 500; }
 .lede { font-size: 1.1rem; margin: 0 0 14px; max-width: 600px; }
 .lede.strong { font-family: var(--serif); font-size: 1.3rem; line-height: 1.45; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 16px; margin-top: 22px; }
@@ -154,6 +156,8 @@ footer small { opacity: .75; display: block; margin-top: 18px; max-width: 760px;
 }
 @media (max-width: 680px) {
   body { font-size: 16px; }
+  .tagline { font-size: .9rem; letter-spacing: 0; }
+  .tagline span + span::before { margin: 0 7px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .photos, .photos.even, .photos.three { grid-template-columns: 1fr; }
   figure img, .photos.three img { height: 230px; }
@@ -190,7 +194,8 @@ footer small { opacity: .75; display: block; margin-top: 18px; max-width: 760px;
 <header class="hero">
   <div>
     <p class="eyebrow">Student · Vadodara, Gujarat, India</p>
-    <h1>Om Dorkar<br><em>learning, explaining, serving, building.</em></h1>
+    <h1>Om Dorkar</h1>
+    <p class="tagline"><span>Learning</span><span>Explaining</span><span>Serving</span><span>Building</span></p>
     <p class="lede">I gave my first science talk at school in Grade 5, and I have been explaining things to people ever since: first science, now mostly AI. Most of what I build starts with a question someone near me asked. Can a wheelchair user get along this street? Can a shop owner use AI in Gujarati? Do AI models give Indian users equally good answers in their own language?</p>
     <p class="lede strong">Through my talks, mentoring and initiatives I have reached more than 2,500 young people. I have learned that leadership is not defined by age, but by action.</p>
   </div>
