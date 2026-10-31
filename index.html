@@ -55,6 +55,8 @@ h2 { font-size: 1.45rem; margin: 0 0 4px; }
 .photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px; margin: 6px 0 14px; }
 figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
 .photos.even { grid-template-columns: 1fr 1fr; margin-top: 12px; }
+.photos.three { grid-template-columns: repeat(3, 1fr); }
+.photos.three img { height: 200px; }
 .photos.single { grid-template-columns: 1fr; max-width: 560px; }
 figure img { display: block; width: 100%; height: 280px; object-fit: cover; }
 figcaption { font-size: .85rem; color: var(--muted); padding: 8px 12px; }
@@ -63,7 +65,7 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
 @media (max-width: 680px) {
   h1 { font-size: 1.7rem; }
   .stats { grid-template-columns: 1fr 1fr; }
-  .two, .photos, .photos.even { grid-template-columns: 1fr; }
+  .two, .photos, .photos.even, .photos.three { grid-template-columns: 1fr; }
   figure img { height: 240px; }
   nav.top .name { width: 100%; }
 }
@@ -256,7 +258,7 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
     <h3>Food and hygiene help for families in need</h3>
     <p class="when">Weekends · roadside settlements near Vadodara</p>
     <p>On weekends I also visit poor families living in roadside settlements near us. I bring healthy food such as fruit for the children and their families, and help with cleaning and basic hygiene.</p>
-    <div class="photos even">
+    <div class="photos even three">
       <figure>
         <img src="photos/weekend-help-1.jpg" alt="Om handing fruit to three children outside makeshift homes; faces of the family members are blurred">
         <figcaption>Handing out fruit to children</figcaption>
