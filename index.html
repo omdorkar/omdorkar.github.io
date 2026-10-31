@@ -10,23 +10,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #fbf6ee; --bg2: #f4ebdd; --surface: #ffffff; --ink: #1d1f24; --muted: #5b616a; --line: #e8dfd1;
-  --accent: #c0541f; --accent-2: #1f6f6a; --accent-soft: #fbe6d8; --teal-soft: #dcefec; --chip: #f1e9dc;
-  --shadow: 0 1px 2px rgba(60,40,20,.06), 0 8px 24px rgba(60,40,20,.08);
-  --shadow-lg: 0 2px 4px rgba(60,40,20,.08), 0 18px 40px rgba(60,40,20,.14);
+  --bg: #f5f7fb; --bg2: #eaeef6; --surface: #ffffff; --ink: #0f1b33; --muted: #55607a; --line: #dde3ee;
+  --accent: #1d4ed8; --accent-2: #8a6400; --gold: #d4a017; --accent-soft: #e3ebfd; --teal-soft: #fbf1d6; --chip: #e9eef8;
+  --shadow: 0 1px 2px rgba(15,27,51,.06), 0 8px 24px rgba(15,27,51,.08);
+  --shadow-lg: 0 2px 4px rgba(15,27,51,.08), 0 18px 40px rgba(15,27,51,.16);
   --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
   --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #15161a; --bg2: #1b1d22; --surface: #202228; --ink: #eeebe6; --muted: #a4a9b0; --line: #33363d;
-    --accent: #f2925e; --accent-2: #6cc5bd; --accent-soft: #3a271d; --teal-soft: #1b3331; --chip: #2a2c32;
+    --bg: #0d1424; --bg2: #121a2e; --surface: #172036; --ink: #e8ecf5; --muted: #a3adc2; --line: #2a3550;
+    --accent: #7aa2ff; --accent-2: #e8c25a; --gold: #e8c25a; --accent-soft: #1a2747; --teal-soft: #2a2414; --chip: #1f2a44;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.3); --shadow-lg: 0 18px 40px rgba(0,0,0,.45);
   }
 }
 :root[data-theme="dark"] {
-  --bg: #15161a; --bg2: #1b1d22; --surface: #202228; --ink: #eeebe6; --muted: #a4a9b0; --line: #33363d;
-  --accent: #f2925e; --accent-2: #6cc5bd; --accent-soft: #3a271d; --teal-soft: #1b3331; --chip: #2a2c32;
+  --bg: #0d1424; --bg2: #121a2e; --surface: #172036; --ink: #e8ecf5; --muted: #a3adc2; --line: #2a3550;
+  --accent: #7aa2ff; --accent-2: #e8c25a; --gold: #e8c25a; --accent-soft: #1a2747; --teal-soft: #2a2414; --chip: #1f2a44;
   --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.3); --shadow-lg: 0 18px 40px rgba(0,0,0,.45);
 }
 * { box-sizing: border-box; }
@@ -41,7 +41,7 @@ a { color: var(--accent); text-underline-offset: 3px; }
 nav.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
 nav.top .wrap { display: flex; align-items: center; gap: 4px 6px; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap; }
 nav.top .name { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; margin-right: auto; display: flex; align-items: center; gap: 8px; }
-nav.top .name i { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; font-style: normal; font-size: .8rem; display: grid; place-items: center; font-family: var(--sans); font-weight: 700; }
+nav.top .name i { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--gold)); color: #fff; font-style: normal; font-size: .8rem; display: grid; place-items: center; font-family: var(--sans); font-weight: 700; }
 nav.top .links-nav { display: flex; flex-wrap: wrap; gap: 2px; }
 nav.top .links-nav a { color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500; padding: 5px 10px; border-radius: 999px; transition: background .2s, color .2s; }
 nav.top .links-nav a:hover, nav.top .links-nav a.active { color: var(--ink); background: var(--chip); }
@@ -50,7 +50,7 @@ nav.top .links-nav a:hover, nav.top .links-nav a.active { color: var(--ink); bac
 /* hero */
 .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; padding: 64px 0 24px; }
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-2); background: var(--teal-soft); padding: 5px 12px; border-radius: 999px; margin: 0 0 18px; }
-.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); }
+.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
 h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.02; letter-spacing: -.02em; margin: 0 0 14px; }
 h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
 .place { color: var(--muted); margin: 0 0 22px; font-weight: 500; }
@@ -62,11 +62,11 @@ h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
 .collage .c1 { width: 72%; height: 330px; right: 0; top: 0; transform: rotate(2.5deg); }
 .collage .c2 { width: 58%; height: 210px; left: 0; bottom: 18px; transform: rotate(-4deg); }
 .collage .badge { position: absolute; right: 8px; bottom: 0; background: var(--ink); color: var(--bg); border-radius: 14px; padding: 10px 14px; font-size: .82rem; font-weight: 600; box-shadow: var(--shadow-lg); transform: rotate(3deg); }
-.collage .badge b { display: block; font-family: var(--serif); font-size: 1.4rem; color: var(--accent); }
+.collage .badge b { display: block; font-family: var(--serif); font-size: 1.4rem; color: var(--gold); }
 
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 26px 0 10px; }
 .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 18px 16px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
-.stat::after { content: ""; position: absolute; left: 0; top: 0; height: 4px; width: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.stat::after { content: ""; position: absolute; left: 0; top: 0; height: 4px; width: 100%; background: linear-gradient(90deg, var(--accent), var(--gold)); }
 .stat b { display: block; font-family: var(--serif); font-size: 2.3rem; line-height: 1.1; color: var(--ink); font-weight: 700; }
 .stat span { font-size: .86rem; color: var(--muted); line-height: 1.4; display: block; margin-top: 4px; }
 
@@ -133,8 +133,8 @@ figcaption { font-size: .84rem; color: var(--muted); padding: 9px 12px; }
 
 footer { margin-top: 56px; padding: 40px 0 56px; background: var(--ink); color: var(--bg); }
 footer .big { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.25; margin: 0 0 14px; max-width: 760px; }
-footer .big em { color: var(--accent); }
-footer a { color: var(--accent); }
+footer .big em { color: var(--gold); }
+footer a { color: var(--gold); }
 footer small { opacity: .75; display: block; margin-top: 18px; max-width: 760px; }
 
 /* reveal */
