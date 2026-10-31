@@ -69,17 +69,23 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
   figure img { height: 240px; }
   nav.top .name { width: 100%; }
 }
+.why { background: var(--accent-soft); border-radius: 14px; padding: 20px 22px; margin: 0 0 14px; }
+.why p { margin: 0 0 12px; font-size: 1.05rem; }
+.why p:last-child { margin-bottom: 0; }
+.intro-line { max-width: 700px; margin: -8px 0 18px; }
+.chapter { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 0 0 2px; }
+ul.plain { margin: 0 0 10px; padding-left: 20px; }
 </style>
 </head>
 <body>
 <nav class="top"><div class="wrap">
   <a class="name" href="#">Om Dorkar</a>
+  <a href="#why">Why</a>
   <a href="#academics">Academics</a>
-  <a href="#projects">Projects</a>
-  <a href="#talks">Talks</a>
-  <a href="#hackathon">Hackathons</a>
-  <a href="#mentoring">Mentoring</a>
-  <a href="#community">Community</a>
+  <a href="#speaking">Speaking</a>
+  <a href="#service">Service</a>
+  <a href="#building">Building</a>
+  <a href="#beyond">Beyond</a>
 </div></nav>
 
 <main class="wrap">
@@ -90,13 +96,25 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
   <p class="lede">Through my talks, mentoring and initiatives I have reached more than 800 young people. I have learned that leadership is not defined by age, but by action.</p>
   <div class="stats">
     <div class="stat"><b>3</b><span>open projects on GitHub</span></div>
-    <div class="stat"><b>~20</b><span>students mentored in robotics &amp; AI</span></div>
+    <div class="stat"><b>~200</b><span>students mentored in robotics &amp; AI</span></div>
     <div class="stat"><b>~50</b><span>local business owners helped with AI</span></div>
     <div class="stat"><b>800+</b><span>young people reached through talks, mentoring &amp; initiatives</span></div>
   </div>
 </header>
 
+<section id="why">
+  <p class="chapter">Why</p>
+  <h2>Why I do this</h2>
+  <div class="why">
+    <p>I believe serving a community works in two directions. It gives people the skills and confidence to help themselves, and it makes life better for everyone it touches, including the person doing the serving.</p>
+    <p>I want to bring together people from very different backgrounds, many of them still working out who they are, and mix ideas from different subjects into one close community that changes things for the better. Above all I want to help close the gaps that hold underprivileged people back. My long-term hope is to help build a world that has never existed before: a fairer one than any we have had.</p>
+    <p>At university I want to use every resource and every person around me to keep turning ideas into action, and to take this work far beyond Vadodara.</p>
+  </div>
+  <p>The rest of this page follows how that grew: from learning and explaining, to noticing the gaps around me, to serving people face to face, to building tools that reach more people than I ever could in person.</p>
+</section>
+
 <section id="academics">
+  <p class="chapter">Chapter 1 · Learning</p>
   <h2>Academics</h2>
   <p class="sub">Delhi Public School Harni, Vadodara.</p>
   <div class="card">
@@ -132,45 +150,10 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
   </div>
 </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <p class="sub">Everything here is public: the code, the data and the write-ups.</p>
-
-  <article class="card">
-    <h3>Language and Script Gaps in Local Language Models for Indian Users</h3>
-    <p class="when">Research audit · v1.0 released 23 October 2026</p>
-    <p>Do AI models that run on your own laptop answer an Indian user as well in Marathi or Hinglish as they do in English? I ran five open-weight models (Gemma 3 12B, Qwen3 8B, Llama 3.1 8B, gpt-oss 20B and Sarvam-30B) fully offline on one laptop. I asked each one the same Belebele and Global-MMLU questions in English, in 13 Indian languages, in native and romanized script, and in synthetic Indian English and Hinglish.</p>
-    <p>I also tested two fixes: converting romanized text to native script, and translating to English first. All 76,400 model answers are released with the code.</p>
-    <div class="links">
-      <a href="https://github.com/omdorkar/local-language-models-india">Code &amp; data</a>
-      <a href="https://github.com/omdorkar/local-language-models-india/blob/main/paper/paper.pdf">Paper (PDF)</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <h3>Vadodara Access Map</h3>
-    <p class="when">Open community map · started October 2026</p>
-    <p>An open map of the barriers that make Vadodara's streets hard to use for people with limited mobility: broken footpaths, missing ramps, blocked crossings. It combines OpenStreetMap data, my own survey photos, AI scans of public street-level imagery (always labelled as AI) and reports from residents. Every week the model learns from the residents' votes.</p>
-    <div class="links">
-      <a href="https://omdorkar.github.io/vadodara-access-map/">Open the map</a>
-      <a href="https://github.com/omdorkar/vadodara-access-map">Code</a>
-    </div>
-  </article>
-
-  <article class="card">
-    <h3>AI Explainers in Gujarati and Marathi</h3>
-    <p class="when">54-part guide · published October 2026</p>
-    <p>A plain-language guide to AI for shop owners and families, in Gujarati, Marathi and English, with an infographic, a real-life example and common mistakes in every part. It is the written version of what I had been explaining to local business owners in person.</p>
-    <div class="links">
-      <a href="https://omdorkar.github.io/ai-explainers/">Read the guide</a>
-      <a href="https://github.com/omdorkar/ai-explainers">Code</a>
-    </div>
-  </article>
-</section>
-
-<section id="talks">
-  <h2>Talks and public speaking</h2>
-  <p class="sub">At school, at inter-school events and at Model United Nations conferences.</p>
+<section id="speaking">
+  <p class="chapter">Chapter 2 · Explaining</p>
+  <h2>Speaking and debate</h2>
+  <p class="sub intro-line">Explaining something to others is how I find out whether I really understand it. It is also how I first learned to listen to an audience.</p>
   <ul class="chips">
     <li>Science</li><li>AI, explained simply</li><li>Awareness</li><li>AI for everyday people</li><li>AI safety &amp; trust</li><li>Model UN</li>
   </ul>
@@ -185,8 +168,9 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
     </figure>
   </div>
   <div class="card">
+    <h3>School and inter-school talks</h3>
+    <p class="when">Since Grade 5</p>
     <p>My first talk was on science, in Grade 5. Since then I have spoken at school assemblies and science weeks, and many of my talks have been at inter-school events. The topics grew with me: science first, then AI, then awareness topics, and lately how ordinary people can use AI in daily life.</p>
-    <p>I also take part in Model United Nations conferences, where I research a country's position and argue it in committee.</p>
   </div>
   <div class="card">
     <h3>Trust and safety in AI and robotics</h3>
@@ -204,53 +188,38 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
       </figure>
     </div>
   </div>
-</section>
-
-<section id="hackathon">
-  <h2>Hackathons</h2>
-  <p class="sub">Building things against the clock.</p>
   <div class="card">
-    <h3>Vadodara Hackathon 2.0, part of Vadodara Innofest 3.0</h3>
-    <p class="when">Hands-on hackathon · Vadodara</p>
-    <p>I took part in Vadodara Hackathon 2.0, a student hackathon where teams work on problems people face in daily life. The event is meant to build a habit of problem-solving and product thinking, not just coding.</p>
-    <div class="photos single">
-      <figure>
-        <img src="photos/vadodara-hackathon.jpg" alt="Students working on laptops at desks in a large workshop hall during the hands-on session of Vadodara Hackathon 2.0">
-        <figcaption>Hands-on session, Vadodara Hackathon 2.0</figcaption>
-      </figure>
-    </div>
+    <h3>Model United Nations</h3>
+    <p class="when">Conferences · delegate</p>
+    <p>At Model United Nations conferences I research a country's position and argue it in committee. MUN taught me to see one problem through many different eyes, which is the same skill I need when I try to bring different kinds of people together.</p>
   </div>
 </section>
 
-<section id="mentoring">
-  <h2>Mentoring</h2>
-  <p class="sub">Robotics and AI integration.</p>
-  <div class="card">
-    <p>I have mentored about 20 students in robotics and in adding AI to their own projects.</p>
-  </div>
-  <div class="photos even single">
-    <figure>
-      <img src="photos/laptop-session.jpg" alt="Om and another student in school blazers sitting at a laptop" style="object-position: 50% 40%">
-      <figcaption>At the laptop with another student</figcaption>
-    </figure>
-  </div>
-</section>
+<section id="service">
+  <p class="chapter">Chapter 3 · Serving</p>
+  <h2>Serving the community</h2>
+  <p class="sub intro-line">This is where I work face to face with people in vulnerable situations: autistic children and people with disabilities, children from underprivileged families, and families living by the roadside. Seeing the gaps came first. Acting on them came next.</p>
 
-<section id="community">
-  <h2>In the community</h2>
-  <p class="sub">Volunteering, teaching and organizing, in person.</p>
   <div class="card">
-    <h3>From the Autism Centre to student-led community events</h3>
+    <h3>Seeing the gaps: from the Autism Centre to student-led events</h3>
     <p class="when">Volunteering · awareness workshops · organizing</p>
     <p>Volunteering at an autism centre changed what I notice. I saw how little awareness there is about disability, and how much accessibility is missing, both for autistic children and for people with physical disabilities.</p>
     <p>I started by writing notes on what I saw, then made posters. Next I talked with psychologists and teachers so I understood it properly. That led to workshops where parents spoke openly about the silence and stigma their families face. From there I began organizing student-led community events, so more young people could be part of the conversation.</p>
-    <p>Accessibility is also what my <a href="https://omdorkar.github.io/vadodara-access-map/">Vadodara Access Map</a> is about.</p>
+    <p>Accessibility is also what my <a href="#building">Vadodara Access Map</a> is about.</p>
   </div>
+
   <div class="card">
-    <h3>AI for local business owners</h3>
-    <p>Since 2025 I have sat down with about 50 local business owners in Vadodara to explain what AI is and how they could use it in their own work. I explain it in the language they think in, not in English. Their questions became the 54-part <a href="https://omdorkar.github.io/ai-explainers/">AI Explainers guide</a>.</p>
-    <p>This help spread by word of mouth and was never formally recorded, so the number is an honest estimate.</p>
+    <h3>Project Humanise</h3>
+    <p class="when">Founder · humanitarian aid</p>
+    <p>I founded Project Humanise, my own social project. It collects resources and materials and passes them on to humanitarian aid organizations.</p>
   </div>
+
+  <div class="card">
+    <h3>Code Kids: teaching Python in a public school</h3>
+    <p class="when">Volunteer teacher · public school</p>
+    <p>Through Code Kids, a project that teaches Python to children at a public school, I help young students take their first steps in programming.</p>
+  </div>
+
   <div class="card">
     <h3>Weekend classes for children from underprivileged families</h3>
     <p class="when">Every weekend · with a group of fellow students</p>
@@ -262,6 +231,7 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
       </figure>
     </div>
   </div>
+
   <div class="card">
     <h3>Food and hygiene help for families in need</h3>
     <p class="when">Weekends · roadside settlements near Vadodara</p>
@@ -282,6 +252,7 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
     </div>
     <p class="when">Faces of the families are blurred to protect their privacy.</p>
   </div>
+
   <div class="card">
     <h3>Community events and awareness drives</h3>
     <p class="when">Local meetups · with classmates</p>
@@ -296,6 +267,78 @@ footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40
         <figcaption>Travelling with classmates</figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<section id="building">
+  <p class="chapter">Chapter 4 · Building</p>
+  <h2>Building with technology</h2>
+  <p class="sub intro-line">I can only sit down with so many people in person. Technology lets the same help reach people I will never meet, so I build tools and share everything openly: the code, the data and the write-ups.</p>
+
+  <article class="card">
+    <h3>Vadodara Access Map</h3>
+    <p class="when">Open community map · started October 2026</p>
+    <p>What I saw at the autism centre made me look at my own city differently. This is an open map of the barriers that make Vadodara's streets hard to use for people with limited mobility: broken footpaths, missing ramps, blocked crossings. It combines OpenStreetMap data, my own survey photos, AI scans of public street-level imagery (always labelled as AI) and reports from residents. Every week the model learns from the residents' votes.</p>
+    <div class="links">
+      <a href="https://omdorkar.github.io/vadodara-access-map/">Open the map</a>
+      <a href="https://github.com/omdorkar/vadodara-access-map">Code</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <h3>AI for local business owners, and the AI Explainers guide</h3>
+    <p class="when">In person since 2025 · 54-part guide published October 2026</p>
+    <p>Since 2025 I have sat down with about 50 local business owners in Vadodara to explain what AI is and how they could use it in their own work. I explain it in the language they think in, not in English. This help spread by word of mouth and was never formally recorded, so the number is an honest estimate.</p>
+    <p>Their questions became a plain-language guide to AI for shop owners and families, in Gujarati, Marathi and English, with an infographic, a real-life example and common mistakes in every part.</p>
+    <div class="links">
+      <a href="https://omdorkar.github.io/ai-explainers/">Read the guide</a>
+      <a href="https://github.com/omdorkar/ai-explainers">Code</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <h3>Language and Script Gaps in Local Language Models for Indian Users</h3>
+    <p class="when">Research audit · v1.0 released 23 October 2026</p>
+    <p>Explaining AI in Gujarati and Marathi made me ask whether AI itself treats those languages fairly. Do AI models that run on your own laptop answer an Indian user as well in Marathi or Hinglish as they do in English? I ran five open-weight models (Gemma 3 12B, Qwen3 8B, Llama 3.1 8B, gpt-oss 20B and Sarvam-30B) fully offline on one laptop. I asked each one the same Belebele and Global-MMLU questions in English, in 13 Indian languages, in native and romanized script, and in synthetic Indian English and Hinglish.</p>
+    <p>I also tested two fixes: converting romanized text to native script, and translating to English first. All 76,400 model answers are released with the code.</p>
+    <div class="links">
+      <a href="https://github.com/omdorkar/local-language-models-india">Code &amp; data</a>
+      <a href="https://github.com/omdorkar/local-language-models-india/blob/main/paper/paper.pdf">Paper (PDF)</a>
+    </div>
+  </article>
+
+  <div class="card">
+    <h3>Mentoring in robotics and AI</h3>
+    <p class="when">About 200 students</p>
+    <p>I have mentored about 200 students in robotics and in adding AI to their own projects.</p>
+    <div class="photos single">
+      <figure>
+        <img src="photos/laptop-session.jpg" alt="Om and another student in school blazers sitting at a laptop" style="object-position: 50% 40%">
+        <figcaption>At the laptop with another student</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Vadodara Hackathon 2.0, part of Vadodara Innofest 3.0</h3>
+    <p class="when">Hands-on hackathon · Vadodara</p>
+    <p>I took part in Vadodara Hackathon 2.0, a student hackathon where teams work on problems people face in daily life. The event is meant to build a habit of problem-solving and product thinking, not just coding.</p>
+    <div class="photos single">
+      <figure>
+        <img src="photos/vadodara-hackathon.jpg" alt="Students working on laptops at desks in a large workshop hall during the hands-on session of Vadodara Hackathon 2.0">
+        <figcaption>Hands-on session, Vadodara Hackathon 2.0</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="beyond">
+  <p class="chapter">Beyond the work</p>
+  <h2>What keeps me going</h2>
+  <div class="card">
+    <p>Outside school and my projects, I like researching whatever topic has caught my curiosity that week. I read books on entrepreneurship, leadership and communication, because the ideas in them help me run projects and work with people.</p>
+    <p>To switch off, I garden, swim and play tennis.</p>
+    <ul class="chips"><li>Research</li><li>Entrepreneurship</li><li>Leadership</li><li>Communication</li><li>Gardening</li><li>Swimming</li><li>Tennis</li></ul>
   </div>
 </section>
 </main>
