@@ -4,107 +4,211 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Om Dorkar</title>
-<meta name="description" content="Om Dorkar, a student in Vadodara, India: open projects, talks, mentoring and AI help for local businesses.">
+<meta name="description" content="Om Dorkar, a student in Vadodara, India: academics, talks, community service and open technology projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #fbf8f3; --surface: #ffffff; --ink: #1f2328; --muted: #5d636b; --line: #e6e0d6;
-  --accent: #b4521f; --accent-soft: #fbe9dd; --chip: #f1ece4;
-  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bg: #fbf6ee; --bg2: #f4ebdd; --surface: #ffffff; --ink: #1d1f24; --muted: #5b616a; --line: #e8dfd1;
+  --accent: #c0541f; --accent-2: #1f6f6a; --accent-soft: #fbe6d8; --teal-soft: #dcefec; --chip: #f1e9dc;
+  --shadow: 0 1px 2px rgba(60,40,20,.06), 0 8px 24px rgba(60,40,20,.08);
+  --shadow-lg: 0 2px 4px rgba(60,40,20,.08), 0 18px 40px rgba(60,40,20,.14);
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #17181b; --surface: #202227; --ink: #ecebe8; --muted: #a3a7ad; --line: #34373d;
-    --accent: #f0905c; --accent-soft: #3a2a20; --chip: #2a2c31;
+    --bg: #15161a; --bg2: #1b1d22; --surface: #202228; --ink: #eeebe6; --muted: #a4a9b0; --line: #33363d;
+    --accent: #f2925e; --accent-2: #6cc5bd; --accent-soft: #3a271d; --teal-soft: #1b3331; --chip: #2a2c32;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.3); --shadow-lg: 0 18px 40px rgba(0,0,0,.45);
   }
 }
 :root[data-theme="dark"] {
-  --bg: #17181b; --surface: #202227; --ink: #ecebe8; --muted: #a3a7ad; --line: #34373d;
-  --accent: #f0905c; --accent-soft: #3a2a20; --chip: #2a2c31;
+  --bg: #15161a; --bg2: #1b1d22; --surface: #202228; --ink: #eeebe6; --muted: #a4a9b0; --line: #33363d;
+  --accent: #f2925e; --accent-2: #6cc5bd; --accent-soft: #3a271d; --teal-soft: #1b3331; --chip: #2a2c32;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.3); --shadow-lg: 0 18px 40px rgba(0,0,0,.45);
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); font-size: 17px; line-height: 1.65; }
-a { color: var(--accent); }
-.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
-nav.top { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
-nav.top .wrap { display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center; padding-top: 10px; padding-bottom: 10px; font-size: .92rem; }
-nav.top .name { font-weight: 700; color: var(--ink); text-decoration: none; margin-right: auto; }
-nav.top a:not(.name) { color: var(--muted); text-decoration: none; }
-nav.top a:not(.name):hover { color: var(--accent); }
-header.hero { padding: 40px 0 8px; }
-h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 6px; }
-.place { color: var(--muted); margin: 0 0 18px; }
-.hero p.lede { font-size: 1.12rem; max-width: 680px; }
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 8px; }
-.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
-.stat b { display: block; font-size: 1.7rem; line-height: 1.1; color: var(--accent); }
-.stat span { font-size: .88rem; color: var(--muted); }
-section { padding: 26px 0 8px; }
-h2 { font-size: 1.45rem; margin: 0 0 4px; }
-.sub { color: var(--muted); margin: 0 0 18px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 0 0 14px; }
-.card h3 { margin: 0 0 2px; font-size: 1.12rem; }
-.card .when { color: var(--muted); font-size: .85rem; margin: 0 0 8px; }
-.card p { margin: 0 0 10px; }
-.card ul { margin: 0 0 10px; padding-left: 20px; }
-.links { display: flex; flex-wrap: wrap; gap: 8px; }
-.links a { font-size: .88rem; text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; background: var(--bg); }
-.links a:hover { border-color: var(--accent); }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 14px; padding: 0; list-style: none; }
-.chips li { background: var(--chip); border-radius: 999px; padding: 2px 12px; font-size: .88rem; }
-.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px; margin: 6px 0 14px; }
-figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-.photos.even { grid-template-columns: 1fr 1fr; margin-top: 12px; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.7; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(900px 500px at 85% -10%, var(--accent-soft), transparent 60%), radial-gradient(700px 500px at -10% 30%, var(--teal-soft), transparent 60%); opacity: .9; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+/* nav */
+nav.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
+nav.top .wrap { display: flex; align-items: center; gap: 4px 6px; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap; }
+nav.top .name { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; margin-right: auto; display: flex; align-items: center; gap: 8px; }
+nav.top .name i { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; font-style: normal; font-size: .8rem; display: grid; place-items: center; font-family: var(--sans); font-weight: 700; }
+nav.top .links-nav { display: flex; flex-wrap: wrap; gap: 2px; }
+nav.top .links-nav a { color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500; padding: 5px 10px; border-radius: 999px; transition: background .2s, color .2s; }
+nav.top .links-nav a:hover, nav.top .links-nav a.active { color: var(--ink); background: var(--chip); }
+#theme { border: 1px solid var(--line); background: var(--surface); color: var(--ink); width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 1rem; margin-left: 6px; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; padding: 64px 0 24px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-2); background: var(--teal-soft); padding: 5px 12px; border-radius: 999px; margin: 0 0 18px; }
+.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); }
+h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.02; letter-spacing: -.02em; margin: 0 0 14px; }
+h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+.place { color: var(--muted); margin: 0 0 22px; font-weight: 500; }
+.lede { font-size: 1.1rem; margin: 0 0 14px; max-width: 600px; }
+.lede.strong { font-family: var(--serif); font-size: 1.3rem; line-height: 1.45; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 16px; margin-top: 22px; }
+.collage { position: relative; height: 460px; }
+.collage figure { position: absolute; margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-lg); border: 6px solid var(--surface); background: var(--surface); }
+.collage figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.collage .c1 { width: 72%; height: 330px; right: 0; top: 0; transform: rotate(2.5deg); }
+.collage .c2 { width: 58%; height: 210px; left: 0; bottom: 18px; transform: rotate(-4deg); }
+.collage .badge { position: absolute; right: 8px; bottom: 0; background: var(--ink); color: var(--bg); border-radius: 14px; padding: 10px 14px; font-size: .82rem; font-weight: 600; box-shadow: var(--shadow-lg); transform: rotate(3deg); }
+.collage .badge b { display: block; font-family: var(--serif); font-size: 1.4rem; color: var(--accent); }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 26px 0 10px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 18px 16px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+.stat::after { content: ""; position: absolute; left: 0; top: 0; height: 4px; width: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.stat b { display: block; font-family: var(--serif); font-size: 2.3rem; line-height: 1.1; color: var(--ink); font-weight: 700; }
+.stat span { font-size: .86rem; color: var(--muted); line-height: 1.4; display: block; margin-top: 4px; }
+
+/* sections */
+section { padding: 56px 0 8px; }
+.sec-head { display: flex; align-items: flex-end; gap: 18px; margin-bottom: 10px; }
+.sec-head .num { font-family: var(--serif); font-size: 4.4rem; line-height: .8; font-weight: 700; color: transparent; -webkit-text-stroke: 1.5px var(--accent); opacity: .85; }
+.chapter { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 0 0 4px; }
+h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3.6vw, 2.5rem); line-height: 1.1; letter-spacing: -.01em; margin: 0; font-weight: 700; }
+.sub { color: var(--muted); margin: 6px 0 22px; }
+.intro-line { max-width: 760px; font-size: 1.05rem; }
+
+/* timeline cards */
+section > .card, section > article.card { position: relative; margin-left: 34px; }
+section > .card::before, section > article.card::before { content: ""; position: absolute; left: -26px; top: 26px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); z-index: 1; }
+section > .card::after, section > article.card::after { content: ""; position: absolute; left: -20px; top: 0; bottom: -16px; width: 2px; background: var(--line); }
+section > .card:last-child::after, section > article.card:last-child::after { bottom: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 22px 24px; margin: 0 0 16px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.card h3 { margin: 0 0 4px; font-size: 1.18rem; line-height: 1.35; font-weight: 700; }
+.card .when { color: var(--accent-2); font-size: .84rem; font-weight: 600; margin: 0 0 10px; }
+.card p { margin: 0 0 12px; }
+.card p:last-child { margin-bottom: 0; }
+ul.plain { margin: 0 0 12px; padding-left: 20px; }
+ul.plain li { margin-bottom: 6px; }
+ul.plain li::marker { color: var(--accent); }
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.links a { font-size: .88rem; font-weight: 600; text-decoration: none; border-radius: 999px; padding: 6px 14px; background: var(--ink); color: var(--bg); transition: transform .2s, background .2s; }
+.links a:nth-child(2) { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.links a:hover { transform: translateY(-1px); }
+.links a::after { content: " ↗"; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 18px; padding: 0; list-style: none; }
+.chips li { background: var(--chip); border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; font-size: .86rem; font-weight: 500; }
+
+/* why */
+#why .why { position: relative; background: linear-gradient(135deg, var(--accent-soft), var(--teal-soft)); border-radius: 24px; padding: 34px 34px 30px 76px; margin: 18px 0 18px; }
+#why .why::before { content: "\201C"; position: absolute; left: 22px; top: 6px; font-family: var(--serif); font-size: 6rem; line-height: 1; color: var(--accent); opacity: .8; }
+#why .why p { font-family: var(--serif); font-size: 1.22rem; line-height: 1.55; margin: 0 0 14px; }
+#why .why p:last-child { margin: 0; }
+#why > p { max-width: 760px; color: var(--muted); }
+
+/* photos */
+.photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px; margin: 14px 0 6px; }
+.photos.even { grid-template-columns: 1fr 1fr; }
 .photos.three { grid-template-columns: repeat(3, 1fr); }
-.photos.three img { height: 200px; }
-.photos.single { grid-template-columns: 1fr; max-width: 560px; }
-figure img { display: block; width: 100%; height: 280px; object-fit: cover; }
-figcaption { font-size: .85rem; color: var(--muted); padding: 8px 12px; }
-.quote { border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 8px; padding: 12px 16px; margin: 0 0 14px; }
-footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 40px; color: var(--muted); font-size: .88rem; }
-@media (max-width: 680px) {
-  h1 { font-size: 1.7rem; }
-  .stats { grid-template-columns: 1fr 1fr; }
-  .two, .photos, .photos.even, .photos.three { grid-template-columns: 1fr; }
-  figure img { height: 240px; }
-  nav.top .name { width: 100%; }
+.photos.single { grid-template-columns: 1fr; max-width: 620px; }
+section > .photos { margin-bottom: 18px; }
+figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.photos figure { cursor: zoom-in; }
+figure img { display: block; width: 100%; height: 280px; object-fit: cover; transition: transform .5s ease; }
+.photos.three img { height: 210px; }
+.photos figure:hover img { transform: scale(1.04); }
+figcaption { font-size: .84rem; color: var(--muted); padding: 9px 12px; }
+
+/* beyond */
+#beyond .card { background: linear-gradient(135deg, var(--surface), var(--bg2)); }
+
+/* lightbox */
+#lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(10,10,12,.88); display: none; align-items: center; justify-content: center; flex-direction: column; padding: 24px 16px; cursor: zoom-out; }
+#lightbox.open { display: flex; }
+#lightbox img { max-width: min(1100px, 100%); max-height: 80vh; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+#lightbox p { color: #eee; margin: 14px 0 0; text-align: center; font-size: .95rem; max-width: 800px; }
+#lightbox button { position: absolute; top: 14px; right: 16px; background: rgba(255,255,255,.12); color: #fff; border: 0; width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; }
+
+footer { margin-top: 56px; padding: 40px 0 56px; background: var(--ink); color: var(--bg); }
+footer .big { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.25; margin: 0 0 14px; max-width: 760px; }
+footer .big em { color: var(--accent); }
+footer a { color: var(--accent); }
+footer small { opacity: .75; display: block; margin-top: 18px; max-width: 760px; }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .card, .card:hover, figure img, .photos figure:hover img { transition: none; transform: none; }
 }
-.why { background: var(--accent-soft); border-radius: 14px; padding: 20px 22px; margin: 0 0 14px; }
-.why p { margin: 0 0 12px; font-size: 1.05rem; }
-.why p:last-child { margin-bottom: 0; }
-.intro-line { max-width: 700px; margin: -8px 0 18px; }
-.chapter { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 0 0 2px; }
-ul.plain { margin: 0 0 10px; padding-left: 20px; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 36px; }
+  .collage { height: 340px; max-width: 520px; }
+  .collage .c1 { height: 240px; }
+  .collage .c2 { height: 160px; }
+}
+@media (max-width: 680px) {
+  body { font-size: 16px; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .photos, .photos.even, .photos.three { grid-template-columns: 1fr; }
+  figure img, .photos.three img { height: 230px; }
+  section > .card, section > article.card { margin-left: 22px; }
+  section > .card::before, section > article.card::before { left: -21px; }
+  section > .card::after, section > article.card::after { left: -16px; }
+  .card { padding: 18px 18px; }
+  .sec-head .num { font-size: 3.2rem; }
+  #why .why { padding: 26px 20px 22px 52px; }
+  #why .why::before { left: 12px; font-size: 4.4rem; }
+  #why .why p { font-size: 1.08rem; }
+  nav.top .links-nav { order: 3; width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+  .collage { height: 300px; }
+  .collage .c1 { height: 210px; width: 76%; }
+  .collage .c2 { height: 140px; width: 60%; }
+}
 </style>
 </head>
 <body>
 <nav class="top"><div class="wrap">
-  <a class="name" href="#">Om Dorkar</a>
-  <a href="#why">Why</a>
-  <a href="#academics">Academics</a>
-  <a href="#speaking">Speaking</a>
-  <a href="#service">Service</a>
-  <a href="#building">Building</a>
-  <a href="#beyond">Beyond</a>
+  <a class="name" href="#"><i>OD</i>Om Dorkar</a>
+  <div class="links-nav">
+    <a href="#why">Why</a>
+    <a href="#academics">Academics</a>
+    <a href="#speaking">Speaking</a>
+    <a href="#service">Service</a>
+    <a href="#building">Building</a>
+    <a href="#beyond">Beyond</a>
+  </div>
+  <button id="theme" type="button" aria-label="Switch light or dark theme">◐</button>
 </div></nav>
 
 <main class="wrap">
 <header class="hero">
-  <h1>Om Dorkar</h1>
-  <p class="place">Student · Vadodara, Gujarat, India</p>
-  <p class="lede">I gave my first science talk at school in Grade 5, and I have been explaining things to people ever since: first science, now mostly AI. Most of what I build starts with a question someone near me asked. Can a wheelchair user get along this street? Can a shop owner use AI in Gujarati? Do AI models give Indian users equally good answers in their own language?</p>
-  <p class="lede">Through my talks, mentoring and initiatives I have reached more than 2,500 young people. I have learned that leadership is not defined by age, but by action.</p>
-  <div class="stats">
-    <div class="stat"><b>3</b><span>open projects on GitHub</span></div>
-    <div class="stat"><b>~200</b><span>students mentored in robotics &amp; AI</span></div>
-    <div class="stat"><b>~50</b><span>local business owners helped with AI</span></div>
-    <div class="stat"><b>2,500+</b><span>young people reached through talks, mentoring &amp; initiatives</span></div>
+  <div>
+    <p class="eyebrow">Student · Vadodara, Gujarat, India</p>
+    <h1>Om Dorkar<br><em>learning, explaining, serving, building.</em></h1>
+    <p class="lede">I gave my first science talk at school in Grade 5, and I have been explaining things to people ever since: first science, now mostly AI. Most of what I build starts with a question someone near me asked. Can a wheelchair user get along this street? Can a shop owner use AI in Gujarati? Do AI models give Indian users equally good answers in their own language?</p>
+    <p class="lede strong">Through my talks, mentoring and initiatives I have reached more than 2,500 young people. I have learned that leadership is not defined by age, but by action.</p>
+  </div>
+  <div class="collage" aria-hidden="true">
+    <figure class="c1"><img src="photos/science-week-dps-harni.jpg" alt=""></figure>
+    <figure class="c2"><img src="photos/pwnsat-board.jpg" alt="" style="object-position: 50% 35%"></figure>
+    <div class="badge"><b>6 years</b>Academic Laureate</div>
   </div>
 </header>
+<div class="stats">
+  <div class="stat"><b data-count="3">3</b><span>open projects on GitHub</span></div>
+  <div class="stat"><b data-count="200" data-prefix="~">~200</b><span>students mentored in robotics &amp; AI</span></div>
+  <div class="stat"><b data-count="50" data-prefix="~">~50</b><span>local business owners helped with AI</span></div>
+  <div class="stat"><b data-count="2500" data-suffix="+">2,500+</b><span>young people reached through talks, mentoring &amp; initiatives</span></div>
+</div>
 
 <section id="why">
-  <p class="chapter">Why</p>
-  <h2>Why I do this</h2>
+  <div class="sec-head"><div><p class="chapter">Why</p><h2>Why I do this</h2></div></div>
   <div class="why">
     <p>I believe serving a community works in two directions. It gives people the skills and confidence to help themselves, and it makes life better for everyone it touches, including the person doing the serving.</p>
     <p>I want to bring together people from very different backgrounds, many of them still working out who they are, and mix ideas from different subjects into one close community that changes things for the better. Above all I want to help close the gaps that hold underprivileged people back. My long-term hope is to help build a world that has never existed before: a fairer one than any we have had.</p>
@@ -114,8 +218,7 @@ ul.plain { margin: 0 0 10px; padding-left: 20px; }
 </section>
 
 <section id="academics">
-  <p class="chapter">Chapter 1 · Learning</p>
-  <h2>Academics</h2>
+  <div class="sec-head"><span class="num" aria-hidden="true">01</span><div><p class="chapter">Chapter 1 · Learning</p><h2>Academics</h2></div></div>
   <p class="sub">Delhi Public School Harni, Vadodara.</p>
   <div class="card">
     <h3>Academic Laureate, six years in a row</h3>
@@ -159,8 +262,7 @@ ul.plain { margin: 0 0 10px; padding-left: 20px; }
 </section>
 
 <section id="speaking">
-  <p class="chapter">Chapter 2 · Explaining</p>
-  <h2>Speaking and debate</h2>
+  <div class="sec-head"><span class="num" aria-hidden="true">02</span><div><p class="chapter">Chapter 2 · Explaining</p><h2>Speaking and debate</h2></div></div>
   <p class="sub intro-line">Explaining something to others is how I find out whether I really understand it. It is also how I first learned to listen to an audience.</p>
   <ul class="chips">
     <li>Science</li><li>Health</li><li>Adoption of AI</li><li>Ethics &amp; trust in AI</li><li>Model UN</li>
@@ -211,8 +313,7 @@ ul.plain { margin: 0 0 10px; padding-left: 20px; }
 </section>
 
 <section id="service">
-  <p class="chapter">Chapter 3 · Serving</p>
-  <h2>Serving the community</h2>
+  <div class="sec-head"><span class="num" aria-hidden="true">03</span><div><p class="chapter">Chapter 3 · Serving</p><h2>Serving the community</h2></div></div>
   <p class="sub intro-line">This is where I work face to face with people in vulnerable situations: autistic children and people with disabilities, children from underprivileged families, and families living by the roadside. Seeing the gaps came first. Acting on them came next.</p>
 
   <div class="card">
@@ -286,16 +387,17 @@ ul.plain { margin: 0 0 10px; padding-left: 20px; }
 </section>
 
 <section id="building">
-  <p class="chapter">Chapter 4 · Building</p>
-  <h2>Building with technology</h2>
+  <div class="sec-head"><span class="num" aria-hidden="true">04</span><div><p class="chapter">Chapter 4 · Building</p><h2>Building with technology</h2></div></div>
   <p class="sub intro-line">I can only sit down with so many people in person. Technology lets the same help reach people I will never meet, so I build tools and share everything openly: the code, the data and the write-ups.</p>
 
   <article class="card">
     <h3>Vadodara Access Map</h3>
     <p class="when">Open community map · started October 2026</p>
     <p>What I saw at the autism centre made me look at my own city differently. This is an open map of the barriers that make Vadodara's streets hard to use for people with limited mobility: broken footpaths, missing ramps, blocked crossings. It combines OpenStreetMap data, my own survey photos, AI scans of public street-level imagery (always labelled as AI) and reports from residents. Every week the model learns from the residents' votes.</p>
+    <p><b>The survey so far:</b> I have photographed and pinned 11 barriers myself, such as broken ramps, high kerbs and blocked footpaths. An AI street scan has checked 721 public street photos for whether a usable footpath is there, and every AI result is marked so residents can check it. Anyone in Vadodara can add a barrier they find.</p>
     <div class="links">
       <a href="https://omdorkar.github.io/vadodara-access-map/">Open the map</a>
+      <a href="https://omdorkar.github.io/vadodara-access-map/report.html">Report a barrier</a>
       <a href="https://github.com/omdorkar/vadodara-access-map">Code</a>
     </div>
   </article>
@@ -348,8 +450,7 @@ ul.plain { margin: 0 0 10px; padding-left: 20px; }
 </section>
 
 <section id="beyond">
-  <p class="chapter">Beyond the work</p>
-  <h2>What keeps me going</h2>
+  <div class="sec-head"><div><p class="chapter">Beyond the work</p><h2>What keeps me going</h2></div></div>
   <div class="card">
     <p>Outside school and my projects, I like researching whatever topic has caught my curiosity that week. I read books on entrepreneurship, leadership and communication, because the ideas in them help me run projects and work with people.</p>
     <p>To switch off, I garden, swim and play badminton.</p>
@@ -359,7 +460,80 @@ ul.plain { margin: 0 0 10px; padding-left: 20px; }
 </main>
 
 <footer><div class="wrap">
-  Code and data for every project: <a href="https://github.com/omdorkar">github.com/omdorkar</a>. Approximate numbers on this page (marked ~) are honest estimates where nothing was formally recorded.
+  <p class="big">Leadership is not defined by age, <em>but by action.</em></p>
+  <p>Code and data for every project: <a href="https://github.com/omdorkar">github.com/omdorkar</a></p>
+  <small>Approximate numbers on this page (marked ~) are honest estimates where nothing was formally recorded. Faces of the families in the service photos are blurred to protect their privacy.</small>
 </div></footer>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer"><button type="button" aria-label="Close">×</button><img alt=""><p></p></div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  try { var t = localStorage.getItem('theme'); if (t) root.setAttribute('data-theme', t); } catch (e) {}
+  document.getElementById('theme').addEventListener('click', function () {
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('section .card, section > .photos, .sec-head, #why .why, .stat');
+  els = Array.prototype.filter.call(els, function (el) { return el.getBoundingClientRect().top > window.innerHeight * 0.9; });
+  els.forEach(function (el) { el.classList.add('reveal'); });
+  setTimeout(function () { els.forEach(function (el) { el.classList.add('in'); }); }, 4000);
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else { els.forEach(function (el) { el.classList.add('in'); }); }
+
+  function countUp(el) {
+    var n = +el.dataset.count, pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    if (reduce) return;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / 1200, 1), v = Math.round(n * (1 - Math.pow(1 - p, 3)));
+      el.textContent = pre + v.toLocaleString('en-IN') + suf;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var stats = document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { countUp(e.target); so.unobserve(e.target); } });
+    });
+    stats.forEach(function (s) { so.observe(s); });
+  }
+
+  var links = document.querySelectorAll('.links-nav a');
+  var secs = Array.prototype.map.call(links, function (a) { return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var no = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    secs.forEach(function (s) { if (s) no.observe(s); });
+  }
+
+  var lb = document.getElementById('lightbox'), lbImg = lb.querySelector('img'), lbCap = lb.querySelector('p');
+  document.querySelectorAll('.photos figure').forEach(function (f) {
+    f.addEventListener('click', function () {
+      var img = f.querySelector('img');
+      lbImg.src = img.src; lbImg.alt = img.alt;
+      lbCap.textContent = (f.querySelector('figcaption') || {}).textContent || '';
+      lb.classList.add('open');
+    });
+  });
+  function close() { lb.classList.remove('open'); lbImg.src = ''; }
+  lb.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
 </body>
 </html>
